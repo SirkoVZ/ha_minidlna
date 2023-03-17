@@ -18,7 +18,8 @@ dirlist=$(echo $MEDIA_DIR | tr ";" "\n")
 
 for dir in $dirlist
 do
-    if [ -z "$DRIVE" ] then
+    if [ -z "$DRIVE" ] 
+    then
     echo "> mount drive: [$DRIVE] to dir [$dir]"
     mount $DRIVE $dir
     fi
