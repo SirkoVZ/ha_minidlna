@@ -22,7 +22,7 @@
     "options": {
       "media_dir": "/media;/share",
 	    "options": "-d",
-      "drive_to_mount": "/dev/sda1"
+      "drive_to_mount": "/dev/sdb1"
     },
     "schema": {
       "media_dir": "str",
