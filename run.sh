@@ -18,8 +18,10 @@ dirlist=$(echo $MEDIA_DIR | tr ";" "\n")
 
 for dir in $dirlist
 do
+    if [$DRIVE != ''] then
     echo "> mount drive: [$DRIVE] to dir [$dir]"
     mount $DRIVE $dir
+    fi
     echo "> setting media dir: [media_dir=$dir]"
 	sed -i "/XXXmedia_dirXXX/a \media_dir=$dir" /etc/minidlna.conf
 done
