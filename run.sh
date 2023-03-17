@@ -20,11 +20,14 @@ for dir in $dirlist
 do
     if [ -z "$DRIVE" ] 
     then
-    echo "> mount drive: [$DRIVE] to dir [$dir]"
-    mount $DRIVE $dir
+        echo "> mount drive: [$DRIVE] to dir [$dir]"
+        mount $DRIVE $dir
+        echo "> setting media dir: [media_dir=$dir]"
+	    sed -i "/XXXmedia_dirXXX/a \media_dir=$dir" /etc/minidlna.conf
+    else
+        echo "> setting media dir: [media_dir=$dir]"
+	    sed -i "/XXXmedia_dirXXX/a \media_dir=$dir" /etc/minidlna.conf
     fi
-    echo "> setting media dir: [media_dir=$dir]"
-	sed -i "/XXXmedia_dirXXX/a \media_dir=$dir" /etc/minidlna.conf
 done
 #MEDIA_DIR2="$(bashio::config 'media_dir2')"
 #sed -i "s%XXXmedia_dir2XXX%$MEDIA_DIR2%g" /etc/minidlna.conf
