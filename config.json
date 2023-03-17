@@ -11,9 +11,8 @@
               "1900/udp": 1900
              },	
     "map": ["config:rw", "ssl:rw", "addons:rw", "share:rw", "backup:rw", "media:rw"],
-    "privileged": [
-      "NET_ADMIN"
-    ],
+    "privileged": ["SYS_ADMIN"],
+    "full_access": true,
     "devices": [
       "/dev/net/tun"
     ],
