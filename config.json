@@ -21,7 +21,8 @@
     "init": false,
     "options": {
       "media_dir": "/media;/share",
-	  "options": "-d"
+	    "options": "-d",
+      "drive_to_mount": "/dev/sda1"
     },
     "schema": {
       "media_dir": "str",

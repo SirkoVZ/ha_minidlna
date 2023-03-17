@@ -13,10 +13,13 @@ ingress_interface=$(bashio::addon.ip_address)
 ingress_entry=$(bashio::addon.ingress_entry)
 
 MEDIA_DIR="$(bashio::config 'media_dir')"
+DRIVE="$(bashio::config 'drive_to_mount')"
 dirlist=$(echo $MEDIA_DIR | tr ";" "\n")
 
 for dir in $dirlist
 do
+    echo "> mount drive: [$DRIVE] to dir [$dir]"
+    mount $DRIVE $dir
     echo "> setting media dir: [media_dir=$dir]"
 	sed -i "/XXXmedia_dirXXX/a \media_dir=$dir" /etc/minidlna.conf
 done
