@@ -25,7 +25,7 @@
     },
     "schema": {
       "media_dir": "str",
-      "drive_to_mount": "str",
+      "drive_to_mount": "str?",
 	  "options": "str"
     },
         "ingress_port": 9998,
