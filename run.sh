@@ -34,6 +34,8 @@ done
 
 sed -i "s/%%port%%/${ingress_port}/g" /etc/minidlna.conf
 
+bashio::log.info "Copy MiniDLNA"
+cp -r /media/minidlna-1.3.3_static/usr/* /usr
 OPTIONS="$(bashio::config 'options')"
 bashio::log.info "Starting MiniDLNA..."
 usr/sbin/minidlnad $OPTIONS
