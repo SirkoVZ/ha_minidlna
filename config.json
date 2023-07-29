@@ -1,6 +1,6 @@
 {
     "name": "Minidlna",
-    "version": "0.5",
+    "version": "0.5.1",
     "slug": "minidlna",
     "description": "MiniDLNA",
     "url": "https://github.com/SirkoVZ/ha_minidlna",
