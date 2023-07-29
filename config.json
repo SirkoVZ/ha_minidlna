@@ -1,9 +1,9 @@
 {
     "name": "Minidlna",
-    "version": "0.4",
+    "version": "0.5",
     "slug": "minidlna",
     "description": "MiniDLNA",
-    "url": "https://github.com/cavaliere78/ha_minidlna",
+    "url": "https://github.com/SirkoVZ/ha_minidlna",
     "startup": "services",
     "boot": "auto",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
@@ -19,9 +19,9 @@
     "host_network": true,
     "init": false,
     "options": {
-      "media_dir": "/media;/share",
+      "media_dir": "/media/MEDIA",
 	    "options": "-d",
-      "drive_to_mount": null
+      "drive_to_mount": /tmp
     },
     "schema": {
       "media_dir": "str",
