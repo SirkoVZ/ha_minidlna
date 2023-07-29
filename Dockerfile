@@ -12,7 +12,7 @@ ENV TZ=Europe/Rome
 
 # Setup base
 # install minidlna
-RUN apk add --no-cache minidlna
+# RUN apk add --no-cache minidlna
 
 # Copy data
 
