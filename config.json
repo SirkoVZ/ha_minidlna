@@ -21,7 +21,7 @@
     "options": {
       "media_dir": "/media/MEDIA",
 	    "options": "-d",
-      "drive_to_mount": /tmp
+      "drive_to_mount": "/tmp"
     },
     "schema": {
       "media_dir": "str",
